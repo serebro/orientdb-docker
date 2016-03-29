@@ -19,6 +19,7 @@ RUN mkdir /orientdb && \
   && rm orientdb-community-$ORIENTDB_VERSION.tar.gz \
   && rm -rf /orientdb/databases/*
 
+RUN wget "http://central.maven.org/maven2/com/orientechnologies/orientdb-spatial/$ORIENTDB_VERSION/orientdb-spatial-$ORIENTDB_VERSION-dist.jar" -o "/orientdb/lib/orientdb-spatial-$ORIENTDB_VERSION-dist.jar"
 
 ENV PATH /orientdb/bin:$PATH
 
